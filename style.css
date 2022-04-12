@@ -35,6 +35,7 @@ button {
     border-radius: 5%;
     border: 2px solid;
     padding: 20px;
+    background-color: gray;
 }
 
 #screen {
@@ -43,6 +44,14 @@ button {
     flex-direction: row;
     flex: 1;
     margin-bottom: 20px;
+}
+
+#clear {
+    background-color: palevioletred;
+}
+
+#delete {
+    background-color: paleturquoise;
 }
 
 .row {
@@ -71,4 +80,9 @@ button {
     border-color: black;
     border-radius: 5% / 10%;
 }
+
+.smallbtn, #screen {
+    background-color: #f6f6f6;
+}
+
 
