@@ -64,12 +64,12 @@ button {
     gap: 10px;
 }
 
-.smallbtn, .bigbtn {
+.operand, .operator, .bigbtn {
     flex: 1;
     height: 70px;
 }
 
-.smallbtn {
+.operand, .operator {
     border: 2px solid;
     border-radius: 10%;
     border-color: black;
@@ -81,7 +81,7 @@ button {
     border-radius: 5% / 10%;
 }
 
-.smallbtn, #screen {
+.operand, .operator, #screen {
     background-color: #f6f6f6;
 }
 
