@@ -51,7 +51,7 @@ function evaluate(x) {
         screenButton.textContent='Error:Division by 0';
         return;
     };
-    let result = operate(parseInt(firstOperand), parseInt(secondOperand), operator);
+    let result = operate(parseFloat(firstOperand), parseFloat(secondOperand), operator);
     firstOperand = result;
     if (x==='=') {
         screenButton.textContent = (Math.round(firstOperand*100))/100;
