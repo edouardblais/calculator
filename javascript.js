@@ -26,18 +26,24 @@ for (let i=0; i<operatorButton.length; i++) {
     operatorButton[i].addEventListener('click', () => evaluate(operatorButton[i].textContent));
 };
 
-clearButton.addEventListener('click', () => {
-    resetScreen();
-    firstOperand='';
-    secondOperand='';
-    operator=''
-});
+window.addEventListener('keydown', pressKey);
 
-deleteButton.addEventListener('click', () => {
+clearButton.addEventListener('click', () => clearScreen());
+
+deleteButton.addEventListener('click', () => deleteNumber());
+
+function deleteNumber() {
     let oldText = screenButton.textContent;
     let newText = oldText.slice(0, -1);
     screenButton.textContent = newText;
-});
+}
+
+function clearScreen() {
+    resetScreen();
+    firstOperand='';
+    secondOperand='';
+    operator='';
+}
 
 function evaluate(x) {
     if (firstOperand==='') {
@@ -81,3 +87,11 @@ function append(choice) {
 function resetScreen() {
     screenButton.textContent = '';
 };
+
+function pressKey(e) {
+    if ((e.key >= '0' && e.key <= '9') || e.key === '.') append(e.key);
+    if (e.key === '=' || '+' || '-' || '/' || '*') evaluate(e.key);
+    if (e.key === 'Backspace') deleteNumber();
+    if (e.key === 'Escape') clearScreen();
+    if (e.key === 'Enter') evaluate('=');
+}

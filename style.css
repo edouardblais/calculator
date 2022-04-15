@@ -41,17 +41,27 @@ button {
 #screen {
     height: 150px;
     display: flex;
-    flex-direction: row;
     flex: 1;
     margin-bottom: 20px;
+    justify-content: flex-end;
+    font-size: 36px;
+    padding: 20px;
 }
 
 #clear {
-    background-color: palevioletred;
+    background-color: #F08080;
 }
 
 #delete {
-    background-color: paleturquoise;
+    background-color: #87CEFA;
+}
+
+#clear:hover {
+    background-color:#CD5C5C;
+}
+
+#delete:hover {
+    background-color:#4682B4;
 }
 
 .row {
@@ -85,4 +95,11 @@ button {
     background-color: #f6f6f6;
 }
 
+.operand:hover, .operator:hover {
+    background-color: #ddd;
+}
 
+#footer {
+    font-size: 26px;
+    font-style: italic;
+}
